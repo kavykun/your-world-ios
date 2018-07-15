@@ -21,5 +21,7 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @IBAction func LoginButton(_ sender: Any) {
+        print("I PRESSED THE LOGIN BUTTON");
+    }
 }
