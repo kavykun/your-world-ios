@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52C5A6AE20FBD42D004A5236 /* LoginViewController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 52C5A6AD20FBD42D004A5236 /* LoginViewController.graphql */; };
+		52C5A6B020FBD9BF004A5236 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A6AF20FBD9BF004A5236 /* API.swift */; };
+		52C5A6B220FBD9D8004A5236 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 52C5A6B120FBD9D8004A5236 /* schema.json */; };
 		6827E1C32059E91400B1F572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827E1C22059E91400B1F572 /* AppDelegate.swift */; };
 		6827E1C52059E91400B1F572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827E1C42059E91400B1F572 /* ViewController.swift */; };
 		6827E1C82059E91400B1F572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6827E1C62059E91400B1F572 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		0BBB42AD318C0A2ABBBFB80B /* Pods-YourWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourWorld/Pods-YourWorld.debug.xcconfig"; sourceTree = "<group>"; };
+		52C5A6AD20FBD42D004A5236 /* LoginViewController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LoginViewController.graphql; sourceTree = "<group>"; };
+		52C5A6AF20FBD9BF004A5236 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = YourWorld/API.swift; sourceTree = SOURCE_ROOT; };
+		52C5A6B120FBD9D8004A5236 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = YourWorld/schema.json; sourceTree = SOURCE_ROOT; };
 		60498AC893A578FA7DDDF0FD /* Pods_YourWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6827E1BF2059E91400B1F572 /* YourWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6827E1C22059E91400B1F572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +56,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52C5A6AC20FBD40A004A5236 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				52C5A6B120FBD9D8004A5236 /* schema.json */,
+				52C5A6AF20FBD9BF004A5236 /* API.swift */,
+				52C5A6AD20FBD42D004A5236 /* LoginViewController.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
 		6827E1B62059E91400B1F572 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +87,7 @@
 		6827E1C12059E91400B1F572 /* YourWorld */ = {
 			isa = PBXGroup;
 			children = (
+				52C5A6AC20FBD40A004A5236 /* GraphQL */,
 				6827E1D72059E9DF00B1F572 /* Controller */,
 				6827E1D82059E9F600B1F572 /* View */,
 				6827E1CC2059E91400B1F572 /* Assets.xcassets */,
@@ -128,10 +145,10 @@
 			buildPhases = (
 				41F7727B3C9030DAFE8199BF /* [CP] Check Pods Manifest.lock */,
 				6827E1BB2059E91400B1F572 /* Sources */,
+				5293B28C20FBC967000DFB5E /* Generate Apollo GraphQL API */,
 				6827E1BC2059E91400B1F572 /* Frameworks */,
 				6827E1BD2059E91400B1F572 /* Resources */,
 				9060FABD9DFDC39292AA4545 /* [CP] Embed Pods Frameworks */,
-				C577EF6521A5A55402B9D66F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,7 +166,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Joey Rattana";
 				TargetAttributes = {
 					6827E1BE2059E91400B1F572 = {
@@ -181,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C5A6AE20FBD42D004A5236 /* LoginViewController.graphql in Resources */,
+				52C5A6B220FBD9D8004A5236 /* schema.json in Resources */,
 				6827E1D02059E91400B1F572 /* LaunchScreen.storyboard in Resources */,
 				6827E1CD2059E91400B1F572 /* Assets.xcassets in Resources */,
 				6827E1C82059E91400B1F572 /* Main.storyboard in Resources */,
@@ -208,6 +227,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5293B28C20FBC967000DFB5E /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift";
+		};
 		9060FABD9DFDC39292AA4545 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,30 +248,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YourWorld/Pods-YourWorld-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YourWorld/Pods-YourWorld-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C577EF6521A5A55402B9D66F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YourWorld/Pods-YourWorld-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -254,6 +274,7 @@
 				6827E1C52059E91400B1F572 /* ViewController.swift in Sources */,
 				6827E1C32059E91400B1F572 /* AppDelegate.swift in Sources */,
 				6827E1DE205A0F5300B1F572 /* Register2ViewController.swift in Sources */,
+				52C5A6B020FBD9BF004A5236 /* API.swift in Sources */,
 				6827E1CB2059E91400B1F572 /* YourWorld.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +315,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -301,6 +323,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -351,6 +374,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -358,6 +382,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -393,10 +418,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 674YYA9X49;
+				DEVELOPMENT_TEAM = E2L636Z97D;
 				INFOPLIST_FILE = YourWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Rattanajoey.YourWorld;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourworld.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,10 +434,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 674YYA9X49;
+				DEVELOPMENT_TEAM = E2L636Z97D;
 				INFOPLIST_FILE = YourWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Rattanajoey.YourWorld;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourworld.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
