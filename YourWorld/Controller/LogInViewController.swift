@@ -50,4 +50,7 @@ class LogInViewController: UIViewController {
         }
     }
     
+    @IBAction func LoginButton(_ sender: Any) {
+        print("I PRESSED THE LOGIN BUTTON");
+    }
 }
