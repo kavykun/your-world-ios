@@ -34,6 +34,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="m6y-Zb-5dz" kind="show" id="QrW-Vb-uE2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0G-8f-L1L">
                                 <rect key="frame" x="0.0" y="567" width="375" height="50"/>
@@ -405,6 +408,6 @@
         <image name="background_2" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jfr-0K-Uro"/>
+        <segue reference="gtg-th-bxd"/>
     </inferredMetricsTieBreakers>
 </document>
