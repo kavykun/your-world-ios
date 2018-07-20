@@ -177,9 +177,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSY-u7-I9L">
-                                <rect key="frame" x="0.0" y="55" width="375" height="558"/>
-                            </sceneKitView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JL6-vZ-aMX">
                                 <rect key="frame" x="0.0" y="612" width="375" height="55"/>
                                 <subviews>
@@ -250,14 +247,17 @@
                                     <constraint firstAttribute="height" constant="55" id="cLY-qc-hmH"/>
                                 </constraints>
                             </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1c4-Ue-f5p">
+                                <rect key="frame" x="0.0" y="55" width="375" height="558"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KSY-u7-I9L" firstAttribute="leading" secondItem="AaW-pp-s5s" secondAttribute="leading" id="621-NN-kPC"/>
+                            <constraint firstItem="1c4-Ue-f5p" firstAttribute="top" secondItem="t2k-UP-e5Y" secondAttribute="bottom" id="42a-nT-l7b"/>
+                            <constraint firstAttribute="bottom" secondItem="1c4-Ue-f5p" secondAttribute="bottom" constant="54" id="8xp-5m-AlX"/>
                             <constraint firstItem="t2k-UP-e5Y" firstAttribute="top" secondItem="njg-eL-A0f" secondAttribute="top" id="BMw-YF-7zc"/>
-                            <constraint firstItem="KSY-u7-I9L" firstAttribute="top" secondItem="njg-eL-A0f" secondAttribute="top" constant="55" id="Euc-Mr-yFJ"/>
-                            <constraint firstAttribute="bottom" secondItem="KSY-u7-I9L" secondAttribute="bottom" constant="54" id="JH6-R4-Wcd"/>
-                            <constraint firstItem="KSY-u7-I9L" firstAttribute="trailing" secondItem="AaW-pp-s5s" secondAttribute="trailing" id="ObX-XN-86u"/>
+                            <constraint firstItem="1c4-Ue-f5p" firstAttribute="trailing" secondItem="AaW-pp-s5s" secondAttribute="trailing" id="D3x-nI-mYJ"/>
+                            <constraint firstItem="1c4-Ue-f5p" firstAttribute="leading" secondItem="AaW-pp-s5s" secondAttribute="leading" id="czh-Qg-ISN"/>
                             <constraint firstItem="JL6-vZ-aMX" firstAttribute="leading" secondItem="AaW-pp-s5s" secondAttribute="leading" id="ecS-8d-z6l"/>
                             <constraint firstAttribute="bottom" secondItem="JL6-vZ-aMX" secondAttribute="bottom" id="ofs-PV-35f"/>
                             <constraint firstItem="JL6-vZ-aMX" firstAttribute="trailing" secondItem="AaW-pp-s5s" secondAttribute="trailing" id="ogy-QQ-VX0"/>
