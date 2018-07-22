@@ -21,7 +21,6 @@
 		6827E1DE205A0F5300B1F572 /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827E1DD205A0F5300B1F572 /* Register2ViewController.swift */; };
 		6827E1E0205A15B100B1F572 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827E1DF205A15B100B1F572 /* MainScreenViewController.swift */; };
 		688BB63C20FFCB0D00B38D2A /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688BB63B20FFCB0D00B38D2A /* LocationItem.swift */; };
-		688BB63E20FFCB6D00B38D2A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688BB63D20FFCB6D00B38D2A /* MapViewController.swift */; };
 		688BB64020FFCD2700B38D2A /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688BB63F20FFCD2700B38D2A /* MapAnnotation.swift */; };
 		9EBA3EC095A2A0D533A8170B /* Pods_YourWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60498AC893A578FA7DDDF0FD /* Pods_YourWorld.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +44,6 @@
 		6827E1DD205A0F5300B1F572 /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
 		6827E1DF205A15B100B1F572 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		688BB63B20FFCB0D00B38D2A /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
-		688BB63D20FFCB6D00B38D2A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		688BB63F20FFCD2700B38D2A /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		A92B43C10D95777DA5F97B50 /* Pods-YourWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-YourWorld/Pods-YourWorld.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +111,6 @@
 				6827E1DD205A0F5300B1F572 /* Register2ViewController.swift */,
 				6827E1DF205A15B100B1F572 /* MainScreenViewController.swift */,
 				688BB63B20FFCB0D00B38D2A /* LocationItem.swift */,
-				688BB63D20FFCB6D00B38D2A /* MapViewController.swift */,
 				688BB63F20FFCD2700B38D2A /* MapAnnotation.swift */,
 			);
 			path = Controller;
@@ -280,7 +277,6 @@
 				6827E1DA2059F40E00B1F572 /* LogInViewController.swift in Sources */,
 				6827E1DC2059F44A00B1F572 /* RegisterViewController.swift in Sources */,
 				6827E1E0205A15B100B1F572 /* MainScreenViewController.swift in Sources */,
-				688BB63E20FFCB6D00B38D2A /* MapViewController.swift in Sources */,
 				688BB64020FFCD2700B38D2A /* MapAnnotation.swift in Sources */,
 				688BB63C20FFCB0D00B38D2A /* LocationItem.swift in Sources */,
 				6827E1C52059E91400B1F572 /* ViewController.swift in Sources */,
