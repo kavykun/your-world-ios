@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Apollo
 
-let graphlQLEndpointURL = "http://localhost:4000"
+let graphlQLEndpointURL = "https://your-world-server.herokuapp.com/"
 let apollo = ApolloClient(url: URL(string: graphlQLEndpointURL)!)
 
 class LogInViewController: UIViewController {
