@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52626E302107F27000C02B92 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52626E2E2107F26F00C02B92 /* Crashlytics.framework */; };
+		52626E312107F27000C02B92 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52626E2F2107F26F00C02B92 /* Fabric.framework */; };
+		52626E332107F48700C02B92 /* Appsee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52626E322107F48700C02B92 /* Appsee.framework */; };
 		52C5A6AE20FBD42D004A5236 /* LoginViewController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 52C5A6AD20FBD42D004A5236 /* LoginViewController.graphql */; };
 		52C5A6B020FBD9BF004A5236 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A6AF20FBD9BF004A5236 /* API.swift */; };
 		52C5A6B220FBD9D8004A5236 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 52C5A6B120FBD9D8004A5236 /* schema.json */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		0BBB42AD318C0A2ABBBFB80B /* Pods-YourWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourWorld/Pods-YourWorld.debug.xcconfig"; sourceTree = "<group>"; };
+		52626E2E2107F26F00C02B92 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		52626E2F2107F26F00C02B92 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		52626E322107F48700C02B92 /* Appsee.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Appsee.framework; sourceTree = "<group>"; };
 		52C5A6AD20FBD42D004A5236 /* LoginViewController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LoginViewController.graphql; sourceTree = "<group>"; };
 		52C5A6AF20FBD9BF004A5236 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = YourWorld/API.swift; sourceTree = SOURCE_ROOT; };
 		52C5A6B120FBD9D8004A5236 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = YourWorld/schema.json; sourceTree = SOURCE_ROOT; };
@@ -53,7 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52626E302107F27000C02B92 /* Crashlytics.framework in Frameworks */,
 				9EBA3EC095A2A0D533A8170B /* Pods_YourWorld.framework in Frameworks */,
+				52626E332107F48700C02B92 /* Appsee.framework in Frameworks */,
+				52626E312107F27000C02B92 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +146,9 @@
 		F74C6DD958C85516508BBE5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52626E322107F48700C02B92 /* Appsee.framework */,
+				52626E2E2107F26F00C02B92 /* Crashlytics.framework */,
+				52626E2F2107F26F00C02B92 /* Fabric.framework */,
 				60498AC893A578FA7DDDF0FD /* Pods_YourWorld.framework */,
 			);
 			name = Frameworks;
@@ -155,6 +167,7 @@
 				6827E1BC2059E91400B1F572 /* Frameworks */,
 				6827E1BD2059E91400B1F572 /* Resources */,
 				9060FABD9DFDC39292AA4545 /* [CP] Embed Pods Frameworks */,
+				52626E2D2107F23900C02B92 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -232,6 +245,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		52626E2D2107F23900C02B92 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run e9ff7d2b25f61d94e1a254b4f1ddd04c97a94bd1 49cc4b4c395999bc6d5ba97d0f63e0c2c062b499014d2d8f2f8b3876c2942ce2";
 		};
 		5293B28C20FBC967000DFB5E /* Generate Apollo GraphQL API */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -427,6 +454,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TYU349V4A5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = YourWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.yourworld.app;
@@ -443,6 +474,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TYU349V4A5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = YourWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.yourworld.app;

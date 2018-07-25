@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Apollo
+import Crashlytics
 
 let graphlQLEndpointURL = "https://your-world-server.herokuapp.com/"
 let apollo = ApolloClient(url: URL(string: graphlQLEndpointURL)!)
@@ -19,6 +20,15 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         fetchPosts()
+        self.logUser()
+    }
+    
+    func logUser() {
+        // TODO: Use the current user's information
+        // You can call any combination of these three methods
+        Crashlytics.sharedInstance().setUserEmail("kavydeveloper@gmail.com")
+        Crashlytics.sharedInstance().setUserIdentifier("12345")
+        Crashlytics.sharedInstance().setUserName("Test User")
     }
     
     override func didReceiveMemoryWarning() {

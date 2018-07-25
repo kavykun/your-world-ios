@@ -1,0 +1,32 @@
+# More documentation about how to customize your build
+# can be found here:
+# https://docs.fastlane.tools
+fastlane_version "2.68.0"
+
+# This value helps us track success metrics for Fastfiles
+# we automatically generate. Feel free to remove this line
+# once you get things running smoothly!
+generated_fastfile_id "922d879c-516a-470f-acf3-766164af98ac"
+
+default_platform :ios
+
+# Fastfile actions accept additional configuration, but
+# don't worry, fastlane will prompt you for required
+# info which you can add here later
+lane :beta do
+  # build your iOS app
+  build_app(
+    scheme: "YourWorld",
+    export_method: "ad-hoc"
+  )
+
+  # upload to Beta by Crashlytics
+  crashlytics(
+    api_token: "e9ff7d2b25f61d94e1a254b4f1ddd04c97a94bd1",
+    build_secret: "49cc4b4c395999bc6d5ba97d0f63e0c2c062b499014d2d8f2f8b3876c2942ce2"
+  )
+
+  # slack(
+  #   slack_url: "https://hooks.slack.com/services/IDS"
+  # )
+end
