@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>We will use your health information to track your progress.</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>We will use your health information to track your progress.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -60,6 +56,10 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We will use your health information to track your progress.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We will use your health information to track your progress.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your World needs access to your location.</string>
 	<key>UILaunchStoryboardName</key>
