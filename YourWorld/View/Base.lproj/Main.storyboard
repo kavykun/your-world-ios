@@ -142,11 +142,7 @@
                                 </state>
                                 <connections>
                                     <action selector="LoginButton:" destination="b7f-dl-O3p" eventType="touchUpInside" id="D94-3F-pQZ"/>
-<<<<<<< HEAD
-                                    <segue destination="pH4-hq-9bv" kind="show" id="Jfr-0K-Uro"/>
-=======
                                     <segue destination="ycK-lo-74M" kind="show" id="Jfr-0K-Uro"/>
->>>>>>> c31ffd2... added nav and menu view see main vc swift file for animation error for the menu
                                 </connections>
                             </button>
                         </subviews>
@@ -282,8 +278,6 @@
                             <constraint firstItem="t2k-UP-e5Y" firstAttribute="trailing" secondItem="njg-eL-A0f" secondAttribute="trailing" id="vAX-ET-cU2"/>
                         </constraints>
                     </view>
-<<<<<<< HEAD
-=======
                     <navigationItem key="navigationItem" id="Gvt-vP-Dsb">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-menu-50" id="z6P-2S-ngu">
                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -292,21 +286,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
->>>>>>> c31ffd2... added nav and menu view see main vc swift file for animation error for the menu
                     <connections>
                         <outlet property="mapView" destination="1c4-Ue-f5p" id="3go-XW-cAX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1O-xP-CHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="2625" y="-172"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ZRI-oP-Fvy">
-            <objects>
-                <viewController id="m6y-Zb-5dz" sceneMemberID="viewController">
-=======
             <point key="canvasLocation" x="4964" y="-134.48275862068968"/>
         </scene>
         <!--Menu View Controller Scene-->
@@ -374,7 +359,6 @@
         <scene sceneID="ZRI-oP-Fvy">
             <objects>
                 <viewController title="Register View Controller Scene" id="m6y-Zb-5dz" sceneMemberID="viewController">
->>>>>>> c31ffd2... added nav and menu view see main vc swift file for animation error for the menu
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vd3-45-YuT"/>
                         <viewControllerLayoutGuide type="bottom" id="p2B-CD-L8h"/>
@@ -463,11 +447,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-<<<<<<< HEAD
-                                    <segue destination="pH4-hq-9bv" kind="show" id="quG-ra-zkx"/>
-=======
                                     <segue destination="fpS-Ly-yTC" kind="show" id="yq2-6T-gym"/>
->>>>>>> c31ffd2... added nav and menu view see main vc swift file for animation error for the menu
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Your Avatar" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ly9-A0-zd2">
@@ -510,14 +490,6 @@
             </objects>
             <point key="canvasLocation" x="1340" y="603"/>
         </scene>
-<<<<<<< HEAD
-    </scenes>
-    <resources>
-        <image name="background_2" width="640" height="1136"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="quG-ra-zkx"/>
-=======
         <!--Health View Controller-->
         <scene sceneID="4KF-fX-AO4">
             <objects>
@@ -844,6 +816,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LnR-6D-znV"/>
->>>>>>> c31ffd2... added nav and menu view see main vc swift file for animation error for the menu
     </inferredMetricsTieBreakers>
 </document>
