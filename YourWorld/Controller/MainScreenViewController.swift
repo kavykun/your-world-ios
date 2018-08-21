@@ -15,13 +15,15 @@ class MainScreenViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var menu_vc : MenuViewController!
     var targets = [LocationItem]()
     var userLocation: CLLocation?
-    
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menu_vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         
         mapView.userTrackingMode = MKUserTrackingMode.followWithHeading
         
@@ -48,7 +50,41 @@ class MainScreenViewController: UIViewController {
         }
         
     }
+
+    @IBAction func menu_Action(_ sender: UIBarButtonItem) { //show menu on ham btn press
+        if AppDelegate.menu_bool{
+            show_menu()
+        }
+        else{
+            close_menu()
+        }
+    }
     
+    func show_menu()
+    {
+        
+    UIView.animate(withDuration: 0.3) { ()->Void in
+        //  \/ error Argument labels '(x:, y:, width:, hight:)' do not match any available overloads
+        
+        //self.menu_vc.view.frame = CGRect(x: 0, y: 60, width: UIScreen.main.bounds.size.width, hight: UIScreen.main.bounds.size.height)
+        self.menu_vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        self.addChildViewController(self.menu_vc)
+        self.view.addSubview(self.menu_vc.view)
+        AppDelegate.menu_bool = false
+     }
+    }
+    
+    func close_menu()
+    {
+        UIView.animate(withDuration: 0.3, animations: { ()->Void in
+            //self.menu_vc.view.frame = CGRect(x: 0, y: 60, width: UIScreen.main.bounds.size.width,hight: UIScreen.main.bounds.size.height)
+        }) { (finished) in
+            
+        self.menu_vc.view.removeFromSuperview()
+    }
+        AppDelegate.menu_bool = true
+        
+    }
     
 }
 
